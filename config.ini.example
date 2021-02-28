@@ -1,0 +1,15 @@
+[DEFAULT]
+Domain : DOMAIN_NAME
+Password : DDNS_PASSWORD
+
+[Root]
+Host : @
+
+[Wildcard]
+Host : *
+
+[WWW]
+Host : www
+
+[ADD ADDITIONAL HOSTS]
+Hosts : HOST
