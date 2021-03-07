@@ -1,0 +1,1 @@
+0 * * * * python /opt/namecheap-ddns/ddns_update.py
