@@ -4,8 +4,8 @@ import configparser
 import logging
 from datetime import datetime
 
-logging.basicConfig(filename="log.txt", level=logging.INFO)
-logfile = "log.txt"
+logging.basicConfig(filename="/tmp/runtime/log.txt", level=logging.INFO)
+logfile = "/tmp/runtime/log.txt"
 
 def remote_ip(domain):
     ip = socket.gethostbyname(domain)
@@ -22,7 +22,7 @@ def set_ip(domain,host,password,local_ip):
 
 def main():
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read('/tmp/runtime/config.ini')
     domain = config['DEFAULT']['Domain']
     ddns_password = config['DEFAULT']['Password']
 
