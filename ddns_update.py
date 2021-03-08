@@ -4,8 +4,8 @@ import configparser
 import logging
 from datetime import datetime
 
-logging.basicConfig(filename="log.txt", level=logging.INFO)
-logfile = "log.txt"
+logging.basicConfig(filename="/tmp/ddns/log.txt", level=logging.INFO)
+logfile = "/tmp/ddns/log.txt"
 
 def remote_ip(domain, host):
     if host != "@" or host != "*":
@@ -27,7 +27,7 @@ def set_ip(domain,host,password,local_ip):
 
 def main():
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read('/tmp/ddns/config.ini')
     domain = config['DEFAULT']['Domain']
     ddns_password = config['DEFAULT']['Password']
 
